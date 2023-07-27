@@ -53,7 +53,7 @@ const DataVisualizationD3 = ({ chartData }) => {
         .enter()
         .append("g")
         .attr("fill", (d) =>
-          d.key === "revenueIncrease" ? "orange" : "#25c779"
+          d.key === "revenueIncrease" ? "#bd7ebe" : "#8bd3c7"
         )
         .selectAll("rect")
         .data((d) => d)

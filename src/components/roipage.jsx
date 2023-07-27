@@ -4,8 +4,8 @@ import DataVisualizationD3 from "./DataVisualizationD3";
 
 export default function RoiPage() {
   // Revenue Increase - Utilization
-  const [internalResources, setInternalResources] = useState(400);
-  const [externalResources, setExternalResources] = useState(50);
+  const [internalResources, setInternalResources] = useState(450);
+  const [externalResources, setExternalResources] = useState(0);
   const [averageBillableHoursPerResource, setAverageBillableHoursPerResource] =
     useState(130);
   const [averageHourlyRate, setAverageHourlyRate] = useState(225);
@@ -179,28 +179,21 @@ export default function RoiPage() {
           <div className="utilizationInputs">
             <h2>Revenue Increase from Improved Utilization</h2>
             <div className="inputRow">
-              <h3>Number of Internal Billable Resources</h3>
+              <h3># of Billable Resources</h3>
               <input
                 onChange={handleChange}
                 value={internalResources}
                 name="internalResources"></input>
             </div>
             <div className="inputRow">
-              <h3>Number of External Billable Resources</h3>
-              <input
-                onChange={handleChange}
-                value={externalResources}
-                name="externalResources"></input>
-            </div>
-            <div className="inputRow">
-              <h3>Average Billable Hours per Resource</h3>
+              <h3>Avg. Billable Hrs per Month per Resource</h3>
               <input
                 onChange={handleChange}
                 value={averageBillableHoursPerResource}
                 name="avgBillHours"></input>
             </div>
             <div className="inputRow">
-              <h3>Average Hourly Rate</h3>
+              <h3>Avg. Hourly Bill Rate</h3>
               <input
                 onChange={handleChange}
                 value={averageHourlyRate}
@@ -219,21 +212,21 @@ export default function RoiPage() {
           <div className="salesInputs">
             <h2>Sales Cost Avoidance from Improved Efficiency</h2>
             <div className="inputRow">
-              <h3>Average Seller Salary</h3>
+              <h3>Avg. Seller Salary</h3>
               <input
                 onChange={handleChange}
                 value={averageSellerSalary}
                 name="averageSellerSalary"></input>
             </div>
             <div className="inputRow">
-              <h3>Average Time Spent on Creating a Custom SOW</h3>
+              <h3>Avg. Hours Spent on Creating a Custom SOW</h3>
               <input
                 onChange={handleChange}
                 value={averageTimeSpentSOW}
                 name="averageTimeSpentSOW"></input>
             </div>
             <div className="inputRow">
-              <h3>Number of SOWs Created per Month</h3>
+              <h3># of SOWs Created per Month</h3>
               <input
                 onChange={handleChange}
                 value={SOWSPerMonth}
@@ -251,7 +244,7 @@ export default function RoiPage() {
         </div>
         <div className="output">
           <div className="bottom-line">
-            <h2>Annual Bottom Line Impact: </h2>
+            <h2>Estimated Annual Bottom Line Impact: </h2>
             <h1>${bottomLineYearlyFormatted}</h1>
           </div>
           <div className="chart">
